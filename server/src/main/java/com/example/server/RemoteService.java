@@ -86,11 +86,13 @@ public class RemoteService extends Service {
 
         @Override
         public List<Book> getBookList() throws RemoteException {
+//            因为binder运行在binder线程池,所以大家可以自己做一下同步
             return bookList;
         }
 
         @Override
         public void addBook(Book book) throws RemoteException {
+//            因为binder运行在binder线程池,所以大家可以自己做一下同步
             bookList.add(book);
         }
 

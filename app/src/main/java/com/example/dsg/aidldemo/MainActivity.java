@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("main1","onServiceConnected");
+            Log.e("main1", "onServiceConnected");
             mIBookManager = IBookManager.Stub.asInterface(service);
             try {
                 mIBookManager.registerBookArrivedListener(bookArrivedListener);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e("main1","onServiceDisconnected");
+            Log.e("main1", "onServiceDisconnected");
 
         }
     };
